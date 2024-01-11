@@ -1,0 +1,93 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+
+    background-color: #434343; /* Color de fondo de respaldo */
+    background-image: url('msi.png');
+    background-size: 50 auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Fija la imagen de fondo */
+    background-position: center center; /* Centra la imagen tanto horizontal como verticalmente */
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    border: 1px solid #000000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.812); /* Sombras */
+}
+
+#productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.producto {
+    width: 300px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.812); /* Sombras */
+    border-radius: 0px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease-in-out; /* Transición suave para la sombra */
+    background-color: #ffffffca; /* Color de fondo de respaldo */
+}
+
+.producto:hover {
+    animation: tambaleo 0.8s ease; /* Aplica la animación en hover de forma continua */
+    color: #232323; /* Cambia el color del texto cuando el cursor está sobre el botón */
+    font-style: italic;
+    
+  }
+
+      /* Restaura el estado normal al dejar de tambalear (hover) */
+.producto:active,
+.producto:focus {
+  transform: rotate(0);
+}
+
+/* Definición de la animación de tambaleo */
+@keyframes tambaleo {
+    0%, 100% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(-5deg);
+    }
+    50% {
+      transform: rotate(5deg);
+    }
+    75% {
+      transform: rotate(-3deg);
+    }
+  }
+
+.producto:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.producto img {
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.854); /* Sombras para las imágenes */
+    transition: transform 0.3s ease-in-out; /* Transición suave para el tamaño de la imagen */
+    .producto:hover img {
+        transform: scale(1.1); /* Aumenta el tamaño de la imagen al hacer hover */
+    }
+    background-color: #000000da; /* Color de fondo de respaldo */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    bottom: 0;
+    width: 100%;
+}
